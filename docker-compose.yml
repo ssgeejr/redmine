@@ -9,14 +9,14 @@ services:
       - 8080:3000
     environment:
       REDMINE_DB_MYSQL: db
-      REDMINE_DB_PASSWORD: example
+      REDMINE_DB_PASSWORD: teamrocket
       REDMINE_SECRET_KEY_BASE: supersecretkey
 
   db:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: teamrocket
       MYSQL_DATABASE: redmine
     volumes:
-      - mysqldb:/var/lib/mysql
+      - /opt/volumes/redminedb:/var/lib/mysql
