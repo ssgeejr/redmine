@@ -6,7 +6,7 @@ services:
     image: redmine
     restart: always
     ports:
-      - 8080:3000
+      - 80:3000
     environment:
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: teamrocket
@@ -19,4 +19,4 @@ services:
       MYSQL_ROOT_PASSWORD: teamrocket
       MYSQL_DATABASE: redmine
     volumes:
-      - /opt/volumes/redminedb:/var/lib/mysql
+      - /opt/volumes/redmine/mysqldb:/var/lib/mysql
